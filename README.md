@@ -13,7 +13,7 @@ Pre-requisite setup for the 2 flows
 1. Connect Ethernet / Wifi shield to Arduino Uno
 2. Connect Ethernet cable to the Ethernet / Wifi shield 
 3. Install sketch on desktop / laptop
-4. Download Paho mqtt library, for Ardunio, from this link (https://www.eclipse.org/downloads/download.php?file=/paho/arduino.zip) in the sketch  
+4. Download Paho mqtt library, for Ardunio, from this link (https://projects.eclipse.org/projects/technology.paho/downloads) in the sketch  
 	a) To load it into the Arduino IDE, the zip file should be downloaded intact, without unzipping.  
 	b) Then in the IDE: Select Sketch -> Import Library -> Add Library  and select the zip file  
 

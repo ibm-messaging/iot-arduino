@@ -1,6 +1,6 @@
 #include <SPI.h>
 #include <Ethernet.h>
-#include <EthernetStack.h>
+#include <IPStack.h>
 #include <Countdown.h>
 #include <MQTTClient.h>
 
@@ -24,8 +24,9 @@ byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03 };
 
 void callback(char* topic, byte* payload, unsigned int length);
 
-EthernetStack ipstack;  
-MQTT::Client<EthernetStack, Countdown, MQTT_MAX_PACKET_SIZE> client(ipstack);
+EthernetClient c;
+IPStack ipstack(c);  
+MQTT::Client<IPStack, Countdown, MQTT_MAX_PACKET_SIZE> client(ipstack);
 void messageArrived(MQTT::MessageData& md);
 
 String deviceEvent;
