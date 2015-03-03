@@ -1,6 +1,6 @@
 #include <SPI.h>
 #include <Ethernet.h>
-#include <EthernetStack.h>
+#include <IPStack.h>
 #include <Countdown.h>
 #include <MQTTClient.h>
 
@@ -12,12 +12,14 @@
 byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02 };
 
 //The convention to be followed is d:quickstart:iotsample-arduino:<MAC Address>
-#define MQTT_CLIENTID "d:quickstart:iotsample-arduino:00aabbccde02"
+#define MQTT_CLIENTID "d:quickstart:iotsample-arduino:aabbccde02"
 
 #define MQTT_TOPIC "iot-2/evt/status/fmt/json"
   
-EthernetStack ipstack;  
-MQTT::Client<EthernetStack, Countdown, MQTT_MAX_PACKET_SIZE> client(ipstack);
+  
+EthernetClient c;  
+IPStack ipstack(c);  
+MQTT::Client<IPStack, Countdown, MQTT_MAX_PACKET_SIZE> client(ipstack);
 
 String deviceEvent;
 
