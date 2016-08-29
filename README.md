@@ -44,7 +44,7 @@ Registered Flow from device and to device
 ===========================================
 1. Modify the AUTHTOKEN in the sketch code
 2. Modify the MS_PROXY, in the sketch code, by providing the values in the following format "uguhsp.messaging.internetofthings.ibmcloud.com", by replacing "uguhsp" with your organization
-3. Modify the CLIENT_ID, in the sketch code, by providing the values in the following format "d:uguhsp:iotsample-arduino:00aabbccde03", by replacing "aabbccde03" with the MAC Address and "uguhsp" with the organization
+3. Modify the CLIENT_ID, in the sketch code, by providing the values in the following format "d:uguhsp:iotsample-arduino:00aabbccde03", by replacing "aabbccde03" with the MAC Address and "uguhsp" with the organization and "iotsample-arduino" with the device type that you entered when creating the device.
 4. Use mqttpublisher / mqttsubscriber to publish and subscribe the commands / events sent to / received from the Arduino Uno
 5. Modify the mac Address (given in the sample as { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03 } ) by the MAC Address of the Ethernet shield
 
