@@ -36,11 +36,11 @@ void loop() {
   if (!client.isConnected()) {
     Serial.println("Connecting to IoT Foundation for publishing Temperature");
     while (rc != 0) {
-      rc = ipstack.connect(MS_PROXY, MQTT_PORT);
+      rc = ipstack.connect(( (char *) MS_PROXY), MQTT_PORT);
     }
     MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
     data.MQTTVersion = 3;
-    data.clientID.cstring = MQTT_CLIENTID;
+    data.clientID.cstring = (char *)MQTT_CLIENTID;    
     rc = -1;
     while ((rc = client.connect(data)) != 0)
     ;
