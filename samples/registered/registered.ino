@@ -4,6 +4,7 @@
 #include <Countdown.h>
 #include <MQTTClient.h>
 
+//#include will be needed depending on your Ethernet shield type
 #define MQTT_MAX_PACKET_SIZE 100
 #define SIZE 100
 
