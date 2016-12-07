@@ -7,6 +7,7 @@
 #define MQTT_PORT 1883
 #define MQTT_MAX_PACKET_SIZE 100
 
+//#include will be needed depending on your Ethernet shield type
 // Update these with values suitable for your network.
 byte mac[] = { 0x00, 0xFF, 0xBB, 0xCC, 0xDE, 0x02 };
 //The convention to be followed is d:quickstart:iotsample-arduino:<MAC Address>
