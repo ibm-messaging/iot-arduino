@@ -15,11 +15,7 @@ byte mac[] = { 0x00, 0xFF, 0xBB, 0xCC, 0xDE, 0x02 };
 #define MQTT_CLIENTID "d:quickstart:iotsample-arduino:00ffbbccde02"
 #define MQTT_TOPIC "iot-2/evt/status/fmt/json"
 
-//For Arduino Yun, instantiate a YunClient and use the instance to declare
-//an IPStack ipstack(c) instead of EthernetStack with c being the YunClient
-// e.g. YunClient c;
-// IPStack ipstack(c);
-EthernetClient c; // replace by a YunClient if running on a Yun
+EthernetClient c;
 IPStack ipstack(c);
 
 MQTT::Client<IPStack, Countdown, 100, 1> client = MQTT::Client<IPStack, Countdown, 100, 1>(ipstack);
