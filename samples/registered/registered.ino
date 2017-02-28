@@ -51,9 +51,9 @@ void loop() {
     Serial.print(MS_PROXY);
     Serial.print("\ton topic : ");
     Serial.println(PUBLISH_TOPIC);
-    while (rc != 0) {
-      rc = ipstack.connect(MS_PROXY, MQTT_PORT);
-    }
+    
+    rc = ipstack.connect(MS_PROXY, MQTT_PORT);
+    
     MQTTPacket_connectData options = MQTTPacket_connectData_initializer;
     options.MQTTVersion = 3;
     options.clientID.cstring = CLIENT_ID;
