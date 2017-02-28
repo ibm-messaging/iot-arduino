@@ -1,7 +1,7 @@
-Arduino Uno Sample
+Arduino Uno/Yun Samples
 ====================
 
-This repository contains samples for connecting Arduino Uno devices to the IBM Watson IoT Platform
+This repository contains samples for connecting Arduino Uno/Yun devices to the IBM Watson IoT Platform
 
 The events that are emitted in this sample are:
 
@@ -10,6 +10,8 @@ The events that are emitted in this sample are:
 
 Pre-requisite setup for the 2 flows
 ============================
+Arduino Uno
+============
 1. Connect Ethernet / Wifi shield to Arduino Uno
 2. Connect Ethernet cable to the Ethernet / Wifi shield 
 3. Install sketch on desktop / laptop
@@ -26,6 +28,12 @@ Pre-requisite setup for the 2 flows
 9. Reset the Ethernet / Wifi shield
 10. Wait for about 10 seconds and the flow starts working
 
+Arduino Yun
+============
+1. Configure Arduino Yun to connect to your WiFi Network
+2. Follow steps-3,4,5,6 from Arduino Uno
+3. Pick the sketch names - quickstart_yun.ino (https://github.com/ibm-watson-iot/device-arduino/blob/master/samples/quickstart/quickstart_yun.ino) / registered_yun.ino (https://github.com/ibm-watson-iot/device-arduino/blob/master/samples/registered/registered_yun.ino) for Arduino Yun
+4. Continue following steps-7 to 10 from Arduino Uno
 
 Quickstart flow
 =======================
@@ -46,7 +54,7 @@ Registered Flow from device and to device
 2. Modify the MS_PROXY, in the sketch code, by providing the values in the following format "uguhsp.messaging.internetofthings.ibmcloud.com", by replacing "uguhsp" with your organization
 3. Modify the CLIENT_ID, in the sketch code, by providing the values in the following format "d:uguhsp:iotsample-arduino:00aabbccde03", by replacing "aabbccde03" with the Device Id and "uguhsp" with the organization and "iotsample-arduino" with the device type that you entered when creating the device.
 4. Use mqttpublisher / mqttsubscriber to publish and subscribe the commands / events sent to / received from the Arduino Uno
-5. Modify the mac Address (given in the sample as { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03 } ) by the MAC Address of the Ethernet shield
+5. Modify the mac Address (given in the sample as { 0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03 } ) by the MAC Address of the Ethernet shield. This applies only for Arduino Uno, no change required in Arduino Yun sketch.
 
 
 Development
